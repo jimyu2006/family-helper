@@ -3,29 +3,7 @@ import { Table, Button } from 'reactstrap';
 
 class App extends Component {
   state = {
-    isLoading: false, invoices: [
-      {
-        "id": "100",
-        "Vendor": "Hankook",
-        "Amount": "$18,000",
-        "Invoice": "1123",
-        "Date": "08/21/2019"
-      },
-      {
-        "id": "200",
-        "Vendor": "Hankook",
-        "Amount": "$28,000",
-        "Invoice": "1123",
-        "Date": "08/21/2019"
-      },
-      {
-        "id": "300",
-        "Vendor": "Hankook",
-        "Amount": "$48,000",
-        "Invoice": "1123",
-        "Date": "08/21/2019"
-      },
-    ]
+    isLoading: false, invoices: []
   };
 
   remove(id) {
@@ -33,9 +11,13 @@ class App extends Component {
     this.setState({ invoices: updatedInvoices });
   }
 
- 
+  async componentDidMount() {
+    const response = await fetch('https://4uxtr8v4vl.execute-api.us-east-1.amazonaws.com/dev');
+    const body=await response.json();
 
+    this.setState({invoices: body, isLoading: false});
 
+  }
 
   render() {
     const isLoading = this.state.isLoading;
