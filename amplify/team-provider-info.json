@@ -11,5 +11,23 @@
       "StackId": "arn:aws:cloudformation:ap-southeast-2:338096013222:stack/amplify-familyhelper-dev-113108/87d2d7d0-d7b0-11eb-a697-0261ca7c64a4",
       "AmplifyAppId": "diphb3127oi6z"
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-familyhelper-test-94008-authRole",
+      "UnauthRoleArn": "arn:aws:iam::338096013222:role/amplify-familyhelper-test-94008-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::338096013222:role/amplify-familyhelper-test-94008-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-familyhelper-test-94008-deployment",
+      "UnauthRoleName": "amplify-familyhelper-test-94008-unauthRole",
+      "StackName": "amplify-familyhelper-test-94008",
+      "StackId": "arn:aws:cloudformation:us-east-1:338096013222:stack/amplify-familyhelper-test-94008/d31e8850-4a52-11ec-8b41-0ac863bb4f65",
+      "AmplifyAppId": "d3jx4vy3n89pqm"
+    },
+    "categories": {
+      "auth": {
+        "familyhelper6c6c0911": {}
+      }
+    }
   }
 }
